@@ -1,0 +1,89 @@
+@modalBackdrop: rgba(0,0,0,0.6);
+@modalBackground: #008bd0;
+@modalBodyBackground: #fff;
+@modalBodyText: #616161;
+@modalZindex: 100;
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5); }
+    30% {
+        transform: scale(1); }
+    60% {
+        transform: scale(0.95); }
+    100% {
+        transform: scale(1); }
+}
+
+@keyframes pop-out {
+    0% {
+        transform: scale(1);
+        opacity: 1; }
+    100% {
+        transform: scale(0.5);
+        opacity: 0; }
+}
+
+.z-modal {
+    font-family: Verdana, Arial;
+    font-size: 16px;
+    background: @modalBackdrop;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @modalZindex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity linear 0.5s;
+
+    &.modal-close {
+        opacity: 0;
+    }
+
+    &.modal-open {
+        .z-modal-content {
+            animation: pop-in 0.5s;
+        }
+    }
+
+    &-content {
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        animation: pop-out 0.2s forwards;
+
+        .z-modal-header {
+            background-color: @modalBackground;
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        .z-modal-body {
+            background-color: @modalBodyBackground;
+            color: @modalBodyText;
+            padding: 10px;
+            min-height: 80px;
+        }
+
+        .z-modal-buttons {
+            background-color: @modalBackground;
+            padding: 5px;
+            text-align: right;
+
+            button {
+                cursor: pointer;
+                height: 25px;
+                border: 1px solid #008bd0;
+                outline: 0;
+                color: #616161;
+                background-color: #FFF;
+                border-color: rgba(0,0,0,.13);
+            }
+        }
+    }
+}

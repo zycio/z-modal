@@ -1,0 +1,29 @@
+{
+  "name": "zmodal",
+  "version": "0.0.1",
+  "description": "Simple modal.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zycio/z-modal.git"
+  },
+  "author": "zycio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zycio/z-modal/issues"
+  },
+  "homepage": "https://github.com/zycio/z-modal#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-cssmin": "^2.1.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jasmine-core": "^2.6.1",
+    "jit-grunt": "^0.10.0",
+    "karma": "^1.6.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4"
+  }
+}

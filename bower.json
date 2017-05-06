@@ -1,0 +1,22 @@
+{
+  "name": "z-modal",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zycio/z-modal",
+  "authors": [
+    "zycio <df@zycio.pl>"
+  ],
+  "description": "Simple modal.",
+  "main": "",
+  "keywords": [
+    "modal",
+    "angular"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-animate": "^1.6.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.4"
+  }
+}
