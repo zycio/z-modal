@@ -6,6 +6,8 @@ When modal is:
 * `opened`: its content is appended to html body
 * `closed`: its content is removed from html body
 
+See demo at [zycio.github.io/z-modal/](https://zycio.github.io/z-modal/).
+
 ## Usage
 Install with bower
 
