@@ -29,7 +29,7 @@
     var cssmin = {
         target: {
             files: {
-                'dest/modal.min.css': ['dest/modal.css']
+                'dest/modal.min.css': ['.tmp/modal.css']
             }
         }
     };
@@ -38,7 +38,7 @@
         options: {},
         dest: {
             files: {
-                'dest/modal.css': 'src/modal.less'
+                '.tmp/modal.css': 'src/modal.less'
             }
         }
     };
@@ -46,7 +46,12 @@
     var clean = {
         dest: {
             files: [{
-                src: ['dest']
+                src: ['dest', '.tmp']
+            }]
+        },
+        tmp: {
+            files: [{
+                src: ['.tmp']
             }]
         }
     };
@@ -63,10 +68,11 @@
         });
 
         grunt.registerTask('dest', [
-            'clean',
+            'clean:dest',
             'uglify',
             'less',
-            'cssmin'
+            'cssmin',
+            'clean:tmp'
         ]);
 
         grunt.registerTask('default', [

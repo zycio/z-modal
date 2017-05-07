@@ -1,13 +1,20 @@
 {
-  "name": "zmodal",
+  "name": "z-modal",
   "version": "0.0.1",
   "description": "Simple modal.",
+  "main": "./dest/modal.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zycio/z-modal.git"
   },
-  "author": "zycio",
+  "author": "zycio (github.com/zycio)",
   "license": "MIT",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "modal",
+    "zmodal"
+  ],
   "bugs": {
     "url": "https://github.com/zycio/z-modal/issues"
   },
