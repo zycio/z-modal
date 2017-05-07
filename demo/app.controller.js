@@ -18,7 +18,7 @@
                     .then(function(data) {
                         vm.data = data;
                     })
-                    .catch(function(err) {
+                    .catch(function() {
                         vm.data = 'Cancelled.';
                     });
                     break;

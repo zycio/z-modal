@@ -62,11 +62,15 @@
             clean: clean
         });
 
-        grunt.registerTask('default', [
+        grunt.registerTask('dest', [
             'clean',
             'uglify',
             'less',
-            'cssmin',
+            'cssmin'
+        ]);
+
+        grunt.registerTask('default', [
+            'dest',
             'watch'
         ]);
     };
