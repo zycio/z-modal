@@ -12,15 +12,27 @@
         }
     };
 
+    var concat = {
+        options: {
+            separator: '\n'
+        },
+        dist: {
+            src: [
+                'src/modal.js',
+                'src/modal.templates.js',
+                'src/modal.service.js',
+                'src/modal.controller.js',
+                'src/modal.directive.js'
+            ],
+            dest: 'dest/modal.js'
+        }
+    };
+
     var uglify = {
         dest: {
             files: {
                 'dest/modal.min.js': [
-                    'src/modal.js',
-                    'src/modal.templates.js',
-                    'src/modal.service.js',
-                    'src/modal.controller.js',
-                    'src/modal.directive.js'
+                    'dest/modal.js'
                 ]
             }
         }
@@ -29,7 +41,7 @@
     var cssmin = {
         target: {
             files: {
-                'dest/modal.min.css': ['.tmp/modal.css']
+                'dest/modal.min.css': ['dest/modal.css']
             }
         }
     };
@@ -38,7 +50,7 @@
         options: {},
         dest: {
             files: {
-                '.tmp/modal.css': 'src/modal.less'
+                'dest/modal.css': 'src/modal.less'
             }
         }
     };
@@ -46,12 +58,7 @@
     var clean = {
         dest: {
             files: [{
-                src: ['dest', 'docs/libs', '.tmp']
-            }]
-        },
-        tmp: {
-            files: [{
-                src: ['.tmp']
+                src: ['dest', 'docs/libs']
             }]
         }
     };
@@ -86,6 +93,7 @@
 
         grunt.initConfig({
             watch: watch,
+            concat: concat,
             uglify: uglify,
             cssmin: cssmin,
             less: less,
@@ -94,11 +102,11 @@
         });
 
         grunt.registerTask('dest', [
-            'clean:dest',
+            'clean',
+            'concat',
             'uglify',
             'less',
             'cssmin',
-            'clean:tmp',
             'copy'
         ]);
 

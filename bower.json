@@ -7,8 +7,8 @@
   ],
   "description": "Simple modal.",
   "main": [
-    "./dest/modal.min.js",
-    "./dest/modal.min.css"
+    "./dest/modal.js",
+    "./dest/modal.css"
   ],
   "keywords": [
     "modal",
