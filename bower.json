@@ -6,7 +6,10 @@
     "zycio <df@zycio.pl>"
   ],
   "description": "Simple modal.",
-  "main": "",
+  "main": [
+    "./dest/modal.min.js",
+    "./dest/modal.min.css"
+  ],
   "keywords": [
     "modal",
     "angular"
