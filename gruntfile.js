@@ -46,13 +46,38 @@
     var clean = {
         dest: {
             files: [{
-                src: ['dest', '.tmp']
+                src: ['dest', 'docs/libs', '.tmp']
             }]
         },
         tmp: {
             files: [{
                 src: ['.tmp']
             }]
+        }
+    };
+
+    var copy = {
+        main: {
+            files: [
+                {
+                    expand: true,
+                    src: 'angular.min.js',
+                    dest: 'docs/libs/angular/',
+                    cwd: 'bower_components/angular/'
+                },
+                {
+                    expand: true,
+                    src: 'angular-animate.min.js',
+                    dest: 'docs/libs/angular-animate/',
+                    cwd: 'bower_components/angular-animate/'
+                },
+                {
+                    expand: true,
+                    src: '**',
+                    dest: 'docs/libs/modal/',
+                    cwd: 'dest/'
+                }
+            ]
         }
     };
     
@@ -64,7 +89,8 @@
             uglify: uglify,
             cssmin: cssmin,
             less: less,
-            clean: clean
+            clean: clean,
+            copy: copy
         });
 
         grunt.registerTask('dest', [
@@ -72,7 +98,8 @@
             'uglify',
             'less',
             'cssmin',
-            'clean:tmp'
+            'clean:tmp',
+            'copy'
         ]);
 
         grunt.registerTask('default', [
