@@ -22,6 +22,16 @@
                         vm.data = 'Cancelled.';
                     });
                     break;
+                case 'autoclose':
+                    ZModal.custom({
+                        header: 'Autoclose modal',
+                        description: 'Text',
+                        buttons: {
+                            confirm: 'OK'
+                        },
+                        autoclose: 2000
+                    });
+                    break;
                 case 'info':
                     ZModal.info('Info modal', 'Any info text');
                     break;

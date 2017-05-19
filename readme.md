@@ -63,12 +63,12 @@ ZModal.confirm('Header text', 'Description text')
 * `header`: Header text.
 * `description`: Description text.
 * `buttons`: Buttons config. There can be one or two buttons. For each of them you can set text.
+  `autoclose`: Time in ms to autoclose modal.
 Usage
 ```js
 ZModal.custom({
     template: 'modal-template.html',
     header: 'Header text',
-    description: 'Description text',
     buttons: {
         cancel: 'Cancel',
         confirm: 'Confirm'
@@ -76,7 +76,7 @@ ZModal.custom({
 })
 .then(function(data) {
     // CONFIRMED
-    // data - stores ddata from form
+    // data - stores data from form
 })
 .catch(function() {
     // CANCELLED

@@ -14,11 +14,12 @@
         <div ng-controller="DemoController as vm">
             <h1>Z-modals</h1>
             <button ng-click="vm.show('custom')">Custom</button>
+            <button ng-click="vm.show('autoclose')">Autoclose 2s</button>
             <button ng-click="vm.show('info')">Info</button>
             <button ng-click="vm.show('confirm')">Confirm</button>
             <pre>DATA: {{ vm.data | json }}</pre>
         </div>
-        
+
         <script src="libs/modal/modal.min.js"></script>
 
         <script src="app.js"></script>
