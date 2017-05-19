@@ -64,6 +64,7 @@ ZModal.confirm('Header text', 'Description text')
 * `description`: Description text.
 * `buttons`: Buttons config. There can be one or two buttons. For each of them you can set text.
 * `autoclose`: Time in ms to autoclose modal.
+
 Usage
 ```js
 ZModal.custom({
