@@ -32,7 +32,7 @@ var app = angular.module('myApp', ['ZModal']);
 
 Inject the modal service
 ```js
-app.controller('MyAppController', ['$scope','ZModal', function() {
+app.controller('MyAppController', ['$scope','ZModal', function($scope, ZModal) {
     $scope.showModal = function() {
         ZModal.info('Header text', 'Description text');
     };
